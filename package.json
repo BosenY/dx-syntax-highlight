@@ -1,0 +1,54 @@
+{
+	"name": "vscode-dx-syntax-highlight",
+	"displayName": "vscode-dx-syntax-highlight",
+	"description": "vscode-dx-syntax-highlight",
+	"version": "0.0.1",
+	"publisher": "boseny",
+	"private": true,
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"main": "./dist/extension.js",
+	"activationEvents": [
+		"onLanguage:css",
+		"onLanguage:less",
+		"onLanguage:scss"
+	],
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint \"src/**/*.ts\"",
+		"watch": "tsc -w -p ./"
+	},
+	"homepage": "https://github.com/BosenY/vscode-dx-syntax-highlight",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/BosenY/vscode-dx-syntax-highlight.git"
+	},
+	"icon": "images/icon.png",
+	"contributes": {
+		"grammars": [
+			{
+				"scopeName": "dx",
+				"path": "./syntaxes/dx.json",
+				"injectTo": [
+					"source.css",
+					"source.css.less",
+					"source.css.scss"
+				]
+			}
+		]
+	},
+	"devDependencies": {
+		"@types/node": "^16.11.7",
+		"@types/vscode": "^1.73.0",
+		"@typescript-eslint/eslint-plugin": "^5.42.0",
+		"@typescript-eslint/parser": "^5.42.0",
+		"eslint": "^8.26.0",
+		"typescript": "^4.9.4"
+	}
+}

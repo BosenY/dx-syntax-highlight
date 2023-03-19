@@ -1,0 +1,12 @@
+{
+  "scopeName": "dx",
+  "fileTypes": [".css", ".less", ".scss"],
+  "injectionSelector": "L:meta.property-value",
+  "patterns": [{ "include": "#expression" }],
+  "repository": {
+    "expression": {
+      "match": "dx",
+      "name": "keyword.other.unit.px"
+    }
+  }
+}
