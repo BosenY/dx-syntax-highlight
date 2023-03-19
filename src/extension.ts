@@ -39,7 +39,6 @@ const provideCompletionItems = (
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
-    vscode.languages.registerHoverProvider(files),
     vscode.languages.registerCompletionItemProvider(files, {
       provideCompletionItems,
     })
